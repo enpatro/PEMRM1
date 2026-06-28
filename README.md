@@ -1,8 +1,8 @@
-# PEMRM1 KPI Visible Entry Fixed Bundle
+# PEMRM1 Internal Only KPI App
 
-Upload all files to GitHub repository root. This version shows all KPI rows by default. User selects month and fills only Actual / Trend / Judgt / Remarks on right side.
+No admin page. No role control. All authenticated users can update internal KPI data.
 
-If data is not saving, update Firestore Rules temporarily:
+Required Firebase Firestore rule for internal testing:
 
 rules_version = '2';
 service cloud.firestore {
@@ -13,4 +13,4 @@ service cloud.firestore {
   }
 }
 
-Important: Authentication > Email/Password must be enabled and user must exist.
+Important: Update firebase-config.js with exact Web App config from Firebase Console.
