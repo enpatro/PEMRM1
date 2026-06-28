@@ -1,9 +1,3 @@
-// Replace below values from Firebase Project Settings > Web app config
-//export const firebaseConfig = {
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -13,13 +7,4 @@ const firebaseConfig = {
   storageBucket: "pemrm1-8b213.firebasestorage.app",
   messagingSenderId: "657822169153",
   appId: "1:657822169153:web:5dd06f087f095f15202ec0"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-
-
-
-  
 };
