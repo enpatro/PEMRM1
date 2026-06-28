@@ -1,12 +1,22 @@
 // Replace below values from Firebase Project Settings > Web app config
 //export const firebaseConfig = {
-   const firebaseConfig = {
-apiKey: "AIzaSyC5ryhOJtqVIiWEYLzLB2gmzJZ-Quk5Ars",
-authDomain: "pemrm1-b5ed6.firebaseapp.com",
-projectId: "pemrm1-b5ed6",
-storageBucket: "pemrm1-b5ed6.firebasestorage.app",
-messagingSenderId: "54528107149",
-appId: "1:54528107149:web:64bd1e3e2b71d89f9138c4"
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAG_dEacwKxSwH9q0WxYwKpipI8P5tMZdo",
+  authDomain: "pemrm1-8b213.firebaseapp.com",
+  projectId: "pemrm1-8b213",
+  storageBucket: "pemrm1-8b213.firebasestorage.app",
+  messagingSenderId: "657822169153",
+  appId: "1:657822169153:web:5dd06f087f095f15202ec0"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 
 
