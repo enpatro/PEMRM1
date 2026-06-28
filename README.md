@@ -1,22 +1,16 @@
-# PE-3F KPI Firebase Web App
+# PEMRM1 KPI Visible Entry Fixed Bundle
 
-## Firebase Setup
-1. Go to https://console.firebase.google.com
-2. Create project: PE-3F-KPI
-3. Build > Authentication > Get started > Sign-in method > Enable Email/Password
-4. Build > Firestore Database > Create database > Start in test mode first
-5. Project settings > General > Add app > Web app > copy config
-6. Paste config in `firebase-config.js`
-7. Authentication > Users > Add user: create admin email/password manually
-8. Open `admin.html` after login and map admin/user roles
+Upload all files to GitHub repository root. This version shows all KPI rows by default. User selects month and fills only Actual / Trend / Judgt / Remarks on right side.
 
-## GitHub Upload
-Upload all files to GitHub repository root and enable Settings > Pages > Deploy from branch > main/root.
+If data is not saving, update Firestore Rules temporarily:
 
-## Firestore Collections
-- kpis
-- absot
-- roles
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
 
-## PPT Automation
-Download data CSV from dashboard, then run `ppt_export.py` locally with Python to create PPT.
+Important: Authentication > Email/Password must be enabled and user must exist.
